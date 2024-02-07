@@ -1,0 +1,15 @@
+span{
+
+    color: red;
+}
+
+div{
+    
+    background-repeat: no-repeat, repeat;
+    background-blend-mode: lighten;
+    }
+    body{
+    
+        background-image: url("../../assets/images/cccccccccccc.avif");
+        background-color: black;
+    }

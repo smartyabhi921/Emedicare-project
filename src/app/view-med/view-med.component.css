@@ -1,0 +1,11 @@
+
+div{
+    width: 100%;
+    background-repeat: no-repeat, repeat;
+    background-blend-mode: lighten;
+    }
+    body{
+    
+        background-image: url("../../assets/images/white.webp");
+        background-color: black;
+    }

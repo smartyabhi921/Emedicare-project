@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div class="bootstrap-wrapper" style="background-color: lightblue">
+    <div class="row">
+       <div class="col-md-5 offset-4" style="border: 1px solid black; padding: 30px;">
+        <img src="../../assets/images/login-banner.png" class="card-img-top" alt="...">
+
+        <form [formGroup]="userReg" (ngSubmit)="uregister()">
+            <div class="mb-3">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">User name</label>
+                     <input type="text" class="form-control"  
+                    id="userName" 
+                    name="userName" 
+                    formControlName="userName" 
+                    aria-describedby="emailHelp"> 
+                    
+                    <span *ngIf="userReg.controls['userName'].touched && !userReg.controls['userName'].valid">
+
+                      <span *ngIf="userReg.controls['userName'].hasError('required')">
+                        User name is required !
+                      </span>
+      
+                      <span *ngIf="userReg.controls['userName'].hasError('minlength')">
+                        User name should be mininum 2 characters !
+                    </span>
+        
+                    <span *ngIf="userReg.controls['userName'].hasError('maxlength')">
+                      User name should be maximun 10 characters !
+                  </span>
+                    </span>
+
+
+                </div>
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" 
+              class="form-control"
+              id="userEmail"
+              name="userEmail"
+              formControlName="userEmail"
+              aria-describedby="emailHelp">
+
+              <span *ngIf="userReg.controls['userEmail'].touched && !userReg.controls['userEmail'].valid">
+
+                <span *ngIf="userReg.controls['userEmail'].hasError('required')">
+                     Email is required !
+                </span>
+  
+                <span *ngIf="userReg.controls['userEmail'].hasError('Email')">
+                  please enter correct Email Id !
+              </span>
+
+               </span>
+
+              <div id="emailHelp" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password"
+              class="form-control"
+              name="userPassword"
+              id="userPassword"
+              formControlName="userPassword">  
+              <span *ngIf="userReg.controls['userPassword'].touched && !userReg.controls['userPassword'].valid">
+
+                <span *ngIf="userReg.controls['userPassword'].hasError('required')">
+                  Password is required !
+                </span>
+  
+                <span *ngIf="userReg.controls['userPassword'].hasError('minlength')">
+                  Password should be mininum 4 characters !
+              </span>
+                   
+              <span *ngIf="userReg.controls['userPassword'].hasError('maxlength')">
+                Password should be maximun 10 characters !
+            </span>          
+              </span>         
+              
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <div class="text-center">
+            <button type="submit" class="btn btn-success">Register</button>
+            <button type="submit" class="btn btn-primary" >Reset</button>
+
+            <br>
+            <a routerLink="/login">Back To Login</a>
+            </div>
+        </form>
+
+

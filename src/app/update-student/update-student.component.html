@@ -1,0 +1,137 @@
+<body>
+<h1 class="text-center">Update - Medicine</h1>
+<div class="container">
+  <div class ="bootstrap-wrapper">
+    <div lass="row">
+        <div class="col-md-5 offset-3">
+           <form [formGroup]="updatestudentForm" (ngSubmit)="updatestudent()">
+                            <div class="form-group">
+                    <label for="exampleInputEmail1">Medicine name</label>
+                     <input type="text" class="form-control"  
+                    id="studentName" 
+                    name="studentName" 
+                    formControlName="studentName" 
+                    aria-describedby="emailHelp">
+                   <span *ngIf="updatestudentForm.controls['studentName'].touched && !updatestudentForm.controls['studentName'].valid">
+
+                <span *ngIf="updatestudentForm.controls['studentName'].hasError('required')">
+                  Medicine name is required !
+                </span>
+
+                <span *ngIf="updatestudentForm.controls['studentName'].hasError('minlength')">
+                  Medicine name should be mininum 2 characters !
+              </span>
+  
+              <span *ngIf="updatestudentForm.controls['studentName'].hasError('maxlength')">
+                Medicine name should be maximun 10 characters !
+            </span>
+          </span> 
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Medicine Type</label>
+
+                    <input type="text" 
+                    class="form-control" 
+                     id="studentClass" 
+                     name="studentClass" 
+                    formControlName="studentClass" 
+                    aria-describedby="emailHelp">
+                    <span *ngIf="updatestudentForm.controls['studentClass'].touched && !updatestudentForm.controls['studentClass'].valid">
+
+                      <span *ngIf="updatestudentForm.controls['studentClass'].hasError('required')">
+                        Medicine Type is required !
+                      </span>
+        
+                      <span *ngIf="updatestudentForm.controls['studentClass'].hasError('minlength')">
+                        Medicine Type should be mininum 2 characters !
+                    </span>
+                         
+                    <span *ngIf="updatestudentForm.controls['studentClass'].hasError('maxlength')">
+                      Medicine Type should be maximun 10 characters !
+                  </span>
+                  
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Available Quantity</label>
+                    <input type="text"
+                     class="form-control"  
+                     id="studentAge" 
+                     name="studentAge" 
+                     formControlName="studentAge" 
+                     aria-describedby="emailHelp">
+                     <span *ngIf="updatestudentForm.controls['studentAge'].touched && !updatestudentForm.controls['studentAge'].valid">
+
+                      <span *ngIf="updatestudentForm.controls['studentAge'].hasError('required')">
+                        Available Quantity is required !
+                      </span>
+        
+                      <span *ngIf="updatestudentForm.controls['studentAge'].hasError('min')">
+                        Available Quantity should be mininum 10 units !
+                    </span>
+                         
+                    <span *ngIf="updatestudentForm.controls['studentAge'].hasError('max')">
+                      Available Quantity should be maximun 30 units !
+                  </span>
+                  
+                    </span>
+
+                     </div>
+
+                    <div class="form-group">
+                     <label for="exampleInputEmail1">Importer Email</label>
+                     <input type="text" class="form-control"  id="studentEmail" name="studentEmail" formControlName="studentEmail" aria-describedby="emailHelp"> 
+
+                     <span *ngIf="updatestudentForm.controls['studentEmail'].touched && !updatestudentForm.controls['studentEmail'].valid">
+
+                      <span *ngIf="updatestudentForm.controls['studentEmail'].hasError('required')">
+                           Email is required !
+                      </span>
+        
+                      <span *ngIf="updatestudentForm.controls['studentEmail'].hasError('Email')">
+                        please enter correct Email Id !
+                    </span>
+
+                     </span>
+                     </div>
+
+                     <div class="form-group">
+                        <label for="studentPassword">Access Number</label>
+                        <input type="password" class="form-control"  
+                        id="studentPassword" 
+                        name="studentPassword" 
+                        formControlName="studentPassword" 
+                        aria-describedby="emailHelp"> 
+                        <span *ngIf="updatestudentForm.controls['studentPassword'].touched && !updatestudentForm.controls['studentPassword'].valid">
+
+                          <span *ngIf="updatestudentForm.controls['studentPassword'].hasError('required')">
+                            Access Number is required !
+                          </span>
+            
+                          <span *ngIf="updatestudentForm.controls['studentPassword'].hasError('minlength')">
+                            Access Number should be mininum 4 characters !
+                        </span>
+                             
+                        <span *ngIf="updatestudentForm.controls['studentPassword'].hasError('maxlength')">
+                          Access Number should be maximun 10 characters !
+                      </span>          
+                        </span>           
+            
+                        </div>
+        
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <div class="text-center">
+                    <button type="update" class="btn btn-success">Update</button>
+                    <button type="reset" class="btn btn-primary">Reset</button>
+                   </div>        
+        
+      </form>
+     </div>             
+    </div>  
+</div>
+</div>
+</body>

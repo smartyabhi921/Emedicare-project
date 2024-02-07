@@ -1,0 +1,17 @@
+span {
+
+    color: red;
+}
+
+body{
+    
+        background-image: url("../../assets/images/white2.jpg");
+        background-color: black;
+     }
+     div{
+
+    
+        background-repeat: no-repeat, repeat;
+        background-image: url("../../assets/images/white.webp");
+        background-blend-mode: lighten;
+        }

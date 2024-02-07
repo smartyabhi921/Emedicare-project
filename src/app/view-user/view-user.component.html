@@ -1,0 +1,26 @@
+<body>
+
+<h1 class="text-center"></h1>
+
+<div class="container" >
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">User ID</th>
+            <th scope="col">USer Email</th>
+              <th scope="col">User Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of userList">
+            <th> {{data.userId}}</th>
+            <td>{{data.userEmail}}</td>
+            <td> {{data.userName}} </td>
+            <td><i style="color: red" (click)="deleteUser(data.userId)" class="fa fa-trash" aria-hidden="true"></i></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+</body>

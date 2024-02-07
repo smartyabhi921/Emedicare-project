@@ -1,0 +1,16 @@
+span {
+
+    color: red;
+}
+div{
+
+    
+background-repeat: no-repeat, repeat;
+background-image: url("../../assets/images/consult.webp");
+background-blend-mode: lighten;
+}
+body{
+
+    background-image: url("../../assets/images/consult.webp");
+    background-color: black;
+}

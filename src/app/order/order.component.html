@@ -1,0 +1,29 @@
+<body>
+<h1 class="text-center"></h1>
+
+<div class="container" >
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Medicine Name</th>
+            <th scope="col">Medicine Type</th>
+            <th scope="col">User Email</th>
+            <th scope="col">Medicine Number</th>
+            <th scope="col">Available Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of orderList">
+            <th>{{data.orderIdl}}</th>
+            <td>{{data.orderName}}</td>
+            <td>{{data.orderClass}}</td>
+            <td>{{data.orderEmail}}</td>
+            <td>{{data.orderPassword}}</td>
+            <td>{{data.orderAge}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+</body>

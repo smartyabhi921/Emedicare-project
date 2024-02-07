@@ -1,0 +1,139 @@
+<body>
+<h1 class="text-center">ADD ORDERS</h1>
+<div class="container">
+  <div class ="bootstrap-wrapper">
+    <div lass="row">
+        <div class="col-md-5 offset-3">
+           <form [formGroup]="addOrder" (ngSubmit)="register()">
+                            <div class="form-group">
+                    <label for="exampleInputEmail1">Medicine name</label>
+                     <input type="text" class="form-control"  
+                    id="orderName" 
+                    name="orderName" 
+                    formControlName="orderName" 
+                    aria-describedby="emailHelp">
+                   <span *ngIf="addOrder.controls['orderName'].touched && !addOrder.controls['orderName'].valid">
+
+                <span *ngIf="addOrder.controls['orderName'].hasError('required')">
+                  Medicine name is required !
+                </span>
+
+                <span *ngIf="addOrder.controls['orderName'].hasError('minlength')">
+                  Medicine name should be mininum 2 characters !
+              </span>
+  
+              <span *ngIf="addOrder.controls['orderName'].hasError('maxlength')">
+                Medicine name should be maximun 10 characters !
+            </span>
+          </span> 
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Medicine Type</label>
+
+                    <input type="text" 
+                    class="form-control" 
+                     id="orderClass" 
+                     name="orderClass" 
+                    formControlName="orderClass" 
+                    aria-describedby="emailHelp">
+                    <span *ngIf="addOrder.controls['orderClass'].touched && !addOrder.controls['orderClass'].valid">
+
+                      <span *ngIf="addOrder.controls['orderClass'].hasError('required')">
+                        Medicine Type is required !
+                      </span>
+        
+                      <span *ngIf="addOrder.controls['orderClass'].hasError('minlength')">
+                        Medicine Type should be mininum 2 characters !
+                    </span>
+                         
+                    <span *ngIf="addOrder.controls['orderClass'].hasError('maxlength')">
+                      Medicine Type should be maximun 10 characters !
+                  </span>
+                  
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">ADD Quantity</label>
+                    <input type="text"
+                     class="form-control"  
+                     id="orderAge" 
+                     name="orderAge" 
+                     formControlName="orderAge" 
+                     aria-describedby="emailHelp">
+                     <span *ngIf="addOrder.controls['orderAge'].touched && !addOrder.controls['orderAge'].valid">
+
+                      <span *ngIf="addOrder.controls['orderAge'].hasError('required')">
+                         Quantity is required !
+                      </span>
+        
+                      <span *ngIf="addOrder.controls['orderAge'].hasError('min')">
+                         Quantity should be mininum 1 units !
+                    </span>
+                         
+                    <span *ngIf="addOrder.controls['orderAge'].hasError('max')">
+                       Quantity should be maximun 30 units !
+                  </span>
+                  
+                    </span>
+
+                     </div>
+
+                    <div class="form-group">
+                     <label for="exampleInputEmail1">User Email</label>
+                     <input type="text" class="form-control"  id="orderEmail" name="orderEmail" formControlName="orderEmail" aria-describedby="emailHelp"> 
+
+                     <span *ngIf="addOrder.controls['orderEmail'].touched && !addOrder.controls['orderEmail'].valid">
+
+                      <span *ngIf="addOrder.controls['orderEmail'].hasError('required')">
+                           Email is required !
+                      </span>
+        
+                      <span *ngIf="addOrder.controls['orderEmail'].hasError('Email')">
+                        please enter correct Email Id !
+                    </span>
+
+                     </span>
+                     </div>
+
+                     <div class="form-group">
+                        <label for="orderPassword">Medicine Number</label>
+                        <input type="password" class="form-control"  
+                        id="orderPassword" 
+                        name="orderPassword" 
+                        formControlName="orderPassword" 
+                        aria-describedby="emailHelp"> 
+                        <span *ngIf="addOrder.controls['orderPassword'].touched && !addOrder.controls['orderPassword'].valid">
+
+                          <span *ngIf="addOrder.controls['orderPassword'].hasError('required')">
+                            Medicine Number is required !
+                          </span>
+            
+                          <span *ngIf="addOrder.controls['orderPassword'].hasError('minlength')">
+                            Medicine Number should be mininum 4 characters !
+                        </span>
+                             
+                        <span *ngIf="addOrder.controls['orderPassword'].hasError('maxlength')">
+                          Medicine Number should be maximun 10 characters !
+                      </span>          
+                        </span>           
+            
+                        </div>
+        
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success">ADD</button>
+                    <button type="reset" class="btn btn-primary">Reset</button> 
+                   </div>        
+       <div class="text-center">
+       <P> <a href="user-dashboard">Go back To home Page</a>   
+       </div>          
+      </form>
+     </div>             
+    </div>  
+</div>
+</div>
+</body>
